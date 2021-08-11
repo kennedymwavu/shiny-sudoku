@@ -3,7 +3,7 @@ library(sudoku)
 library(rhandsontable)
 
 # source files in /R:
-files <- list.files("R", full.names = TRUE)
+files <- list.files("C:/Users/kenmw/OneDrive/Documents/Programming/Mwavu/R/Shiny projects/shiny-sudoku/R", full.names = TRUE)
 
 sapply(files, FUN = source)
 
@@ -11,6 +11,7 @@ sapply(files, FUN = source)
 ui <- fillPage(
   navbarPage(
     title = "Shiny-Sudoku", 
+    includeCSS("C:/Users/kenmw/OneDrive/Documents/Programming/Mwavu/R/Shiny projects/shiny-sudoku/www/styles.css"), 
     
     ######
     # Home: Main panel, solver & everything in here.
