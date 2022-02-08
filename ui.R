@@ -3,7 +3,17 @@ header <- dashboardHeader(
 )
 
 sidebar <- dashboardSidebar(
-  
+  sidebarMenu(
+    menuItem(
+      text = "Solver", 
+      tabName = "solver"
+    ), 
+    
+    menuItem(
+      text = "About", 
+      tabName = "about"
+    )
+  )
 )
 
 body <- dashboardBody(
