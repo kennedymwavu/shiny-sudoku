@@ -4,4 +4,4 @@ library(shinydashboardPlus)
 library(fresh)
 library(sudoku)
 library(rhandsontable)
-
+library(shinycssloaders)
