@@ -1,4 +1,4 @@
-pregenerated_ui <- function(id) {
+random_sudoku_ui <- function(id) {
   fluidRow(
     column(
       width = 12, 

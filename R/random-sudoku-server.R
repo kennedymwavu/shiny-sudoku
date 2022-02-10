@@ -1,4 +1,4 @@
-pregenerated_server <- function(id) {
+random_sudoku_server <- function(id) {
   moduleServer(
     id = id, 
     
