@@ -12,17 +12,21 @@ random_sudoku_server <- function(id) {
       
       # What happens if user clicks `solve_sudoku`?
       observeEvent(input$solve_sudoku, {
-        current_sudoku$initial <- input$sudoku |> 
-          hot_to_r() |> 
-          as.matrix() |> 
-          solveSudoku(
-            print.it = FALSE
-          )
+        withBusyIndicatorServer("solve_sudoku", {
+          current_sudoku$initial <- input$sudoku |> 
+            hot_to_r() |> 
+            as.matrix() |> 
+            solveSudoku(
+              print.it = FALSE
+            )
+        })
       })
       
       # What happens if user clicks `get_new_sudoku`?
       observeEvent(input$get_new_sudoku, {
-        current_sudoku$initial <- generateSudoku()
+        withBusyIndicatorServer("get_new_sudoku", {
+          current_sudoku$initial <- generateSudoku()
+        })
       })
       
       # ----output----
