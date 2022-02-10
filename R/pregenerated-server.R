@@ -22,16 +22,14 @@ pregenerated_server <- function(id) {
       
       # What happens if user clicks `get_new_sudoku`?
       observeEvent(input$get_new_sudoku, {
-        current_sudoku$initial <- generateSudoku() |> 
-          `colnames<-`(value = 1:9) |> 
-          `rownames<-`(value = 1:9)
+        current_sudoku$initial <- generateSudoku()
       })
       
       # ----output----
       output$sudoku <- renderRHandsontable({
         current_sudoku$initial |> 
-          `colnames<-`(value = 1:9) |> 
-          `rownames<-`(value = 1:9) |> 
+          `colnames<-`(value = 1:9) |>
+          `rownames<-`(value = 1:9) |>
           rhandsontable() |> 
           hot_options()
       })
