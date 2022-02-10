@@ -31,6 +31,14 @@ sidebar <- dashboardSidebar(
 
 # ----dashboardBody----
 body <- dashboardBody(
+  # browser favicon:
+  tags$head(
+    tags$link(
+      rel = "shortcut icon", 
+      href = "feather.ico"
+    )
+  ), 
+  
   tabItems(
     tabItem(
       tabName = "solver", 
