@@ -1,7 +1,20 @@
+# ----dashboardHeader----
 header <- dashboardHeader(
-  
+  title = span(
+    tagList(
+      icon(
+        name = "feather",
+        class = "fa-solid fa-feather"
+      ),
+      "Sudoku"
+    ), 
+    style = "font-weight: 900; font-size: 150%;
+            font-family: 'Open Sans', sans-serif;
+        "
+  )
 )
 
+# ----dashboardSidebar----
 sidebar <- dashboardSidebar(
   sidebarMenu(
     menuItem(
@@ -16,6 +29,7 @@ sidebar <- dashboardSidebar(
   )
 )
 
+# ----dashboardBody----
 body <- dashboardBody(
   tabItems(
     tabItem(
@@ -26,6 +40,7 @@ body <- dashboardBody(
   )
 )
 
+# ----dashboardPage----
 ui <- dashboardPage(
   title = "Sudoku Solver", 
   controlbar = NULL, 
