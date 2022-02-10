@@ -16,16 +16,32 @@ pregenerated_ui <- function(id) {
         
         tags$br(), 
         
-        actionButton(
-          inputId = NS(namespace = id, id = "get_new_sudoku"), 
-          label = "New Game", 
-          class = "btn-warning"
-        ), 
-        
-        actionButton(
-          inputId = NS(namespace = id, id = "solve_sudoku"), 
-          label = "Solve", 
-          class = "btn-success"
+        fluidRow(
+          align = "left",
+          
+          column(
+            width = 12, 
+            
+            tags$div(
+              actionButton(
+                inputId = NS(namespace = id, id = "get_new_sudoku"), 
+                label = "New Game", 
+                class = "btn-warning", 
+                style = "width: 100px;"
+              )
+            ), 
+            
+            tags$br(), 
+            
+            tags$div(
+              actionButton(
+                inputId = NS(namespace = id, id = "solve_sudoku"), 
+                label = "Solve", 
+                class = "btn-success", 
+                style = "width: 100px;"
+              )
+            )
+          )
         )
       )
     )
