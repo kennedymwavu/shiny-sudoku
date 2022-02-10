@@ -11,6 +11,21 @@ header <- dashboardHeader(
     style = "font-weight: 900; font-size: 150%;
             font-family: 'Open Sans', sans-serif;
         "
+  ), 
+  
+  # Add icons & links in header:
+  tags$li(
+    tags$a(
+      href = "https://github.com/kennedymwavu/shiny-sudoku", 
+      target = "_blank", # make link open in new tab
+      icon(
+        name = "github", 
+        class = "fab fa-github"
+      ), 
+      title = "GitHub", 
+      style = "font-size: 140%;"
+    ), 
+    class = "dropdown"
   )
 )
 
