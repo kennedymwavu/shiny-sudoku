@@ -1,4 +1,4 @@
-hotOptions <- function(hotTable) {
+hot_options <- function(hotTable) {
   hotTable |> hot_table(highlightCol = TRUE, highlightRow = TRUE) |> 
     hot_cols(colWidths = 50, 
              renderer = "
