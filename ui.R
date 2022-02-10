@@ -46,6 +46,8 @@ sidebar <- dashboardSidebar(
 
 # ----dashboardBody----
 body <- dashboardBody(
+  shinyjs::useShinyjs(), 
+  
   # browser favicon:
   tags$head(
     tags$link(
@@ -58,7 +60,13 @@ body <- dashboardBody(
     tabItem(
       tabName = "random", 
       
-      random_sudoku_ui(id = "pregen")
+      random_sudoku_ui(id = "random_sudoku")
+    ), 
+    
+    tabItem(
+      tabName = "custom", 
+      
+      custom_sudoku_ui(id = "custom_sudoku")
     )
   )
 )
