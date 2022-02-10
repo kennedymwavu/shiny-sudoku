@@ -20,6 +20,10 @@ sidebar <- dashboardSidebar(
     menuItem(
       text = "SOLVE", 
       tabName = "solve", 
+      icon = icon(
+        name = "brain", 
+        class = "fa-solid fa-brain"
+      ), 
       startExpanded = TRUE, 
       
       menuSubItem(
@@ -39,7 +43,11 @@ sidebar <- dashboardSidebar(
     
     menuItem(
       text = "ABOUT", 
-      tabName = "about"
+      tabName = "about", 
+      icon = icon(
+        name = "question", 
+        class = "fa-solid fa-question"
+      )
     )
   )
 )
