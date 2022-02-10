@@ -18,12 +18,27 @@ header <- dashboardHeader(
 sidebar <- dashboardSidebar(
   sidebarMenu(
     menuItem(
-      text = "Solver", 
-      tabName = "solver"
+      text = "SOLVE", 
+      tabName = "solve", 
+      startExpanded = TRUE, 
+      
+      menuSubItem(
+        text = "Random", 
+        tabName = "random"
+      ), 
+      
+      menuSubItem(
+        text = "Custom", 
+        tabName = "custom"
+      )
+    ), 
+    
+    tags$hr(
+      style="height:1px;border:none;color:#333;background-color:grey;"
     ), 
     
     menuItem(
-      text = "About", 
+      text = "ABOUT", 
       tabName = "about"
     )
   )
@@ -41,9 +56,9 @@ body <- dashboardBody(
   
   tabItems(
     tabItem(
-      tabName = "solver", 
+      tabName = "random", 
       
-      pregenerated_ui(id = "pregen")
+      random_sudoku_ui(id = "pregen")
     )
   )
 )
