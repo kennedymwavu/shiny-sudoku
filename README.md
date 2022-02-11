@@ -1,2 +1,4 @@
 # shiny-sudoku
-Shiny exhibition. Solve sudoku puzzles.
+An R Shiny application to solve sudoku puzzles.
+
+View [live app here](https://mwavu.shinyapps.io/shiny-sudoku/)
