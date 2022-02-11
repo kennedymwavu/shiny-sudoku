@@ -22,7 +22,7 @@ header <- dashboardHeader(
         name = "github", 
         class = "fab fa-github"
       ), 
-      title = "GitHub", 
+      title = "View Code On GitHub", 
       style = "font-size: 140%;"
     ), 
     class = "dropdown"
@@ -36,7 +36,7 @@ header <- dashboardHeader(
         name = "linkedin", 
         class = "fa-brands fa-linkedn"
       ), 
-      title = "LinkedIn",
+      title = "View LinkedIn Profile",
       style = "font-size: 140%;"
     ), 
     class = "dropdown"
