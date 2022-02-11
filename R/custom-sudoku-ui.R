@@ -6,6 +6,12 @@ custom_sudoku_ui <- function(id) {
       tags$div(
         style = "width: 50%; margin: auto;", 
         
+        tags$p(
+          style = "font-size: 150%;", 
+          
+          "Input your puzzle digits:"
+        ), 
+        
         rHandsontableOutput(
           outputId = NS(namespace = id, id = "sudoku")
         ) |> 
