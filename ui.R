@@ -26,6 +26,20 @@ header <- dashboardHeader(
       style = "font-size: 140%;"
     ), 
     class = "dropdown"
+  ), 
+  
+  tags$li(
+    tags$a(
+      href = "https://www.linkedin.com/in/mwavukennedy/", 
+      target = "_blank", 
+      icon(
+        name = "linkedin", 
+        class = "fa-brands fa-linkedn"
+      ), 
+      title = "LinkedIn",
+      style = "font-size: 140%;"
+    ), 
+    class = "dropdown"
   )
 )
 
@@ -79,6 +93,17 @@ body <- dashboardBody(
     )
   ), 
   
+  # Fix header & sidebar:
+  tags$script(HTML("$('body').addClass('fixed');")), 
+  
+  # Always scroll to top of any clicked tab:
+  tags$script(
+    '$(".sidebar-menu a[data-toggle=\'tab\']").click(function(){window.scrollTo({top: 0});})'
+  ), 
+  
+  # Increase side bar menu font size:
+  tags$style(HTML(".sidebar-menu>li>a>.fa { font-size: 20px; }")),
+  
   tabItems(
     tabItem(
       tabName = "random", 
@@ -108,9 +133,6 @@ body <- dashboardBody(
             
             tags$div(
               style = "font-size: 150%;", 
-              tags$p(
-                "Here is a list of the packages I've used to develop this application:"
-              ), 
               
               includeMarkdown("about.md")
             )
@@ -121,12 +143,18 @@ body <- dashboardBody(
   )
 )
 
+footer <- dashboardFooter(
+  left = "Mwavu Kennedy"
+)
+
 # ----dashboardPage----
 ui <- dashboardPage(
   title = "Sudoku Solver", 
   controlbar = NULL, 
-  footer = NULL, 
+  scrollToTop = TRUE, 
+  footer = footer, 
   freshTheme = dashboard_theme, 
+  options = list(sidebarExpandOnHover = TRUE), 
   
   header = header, 
   sidebar = sidebar, 
