@@ -1,0 +1,13 @@
+name: shiny-sudoku
+title: shiny-sudoku
+username:
+account: mwavu
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5630420
+bundleId: 5567009
+url: https://mwavu.shinyapps.io/shiny-sudoku/
+when: 1644542394.71637
+lastSyncTime: 1644542394.7164
+asMultiple: FALSE
+asStatic: FALSE
