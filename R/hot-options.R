@@ -5,23 +5,23 @@ hot_options <- function(hotTable) {
            function (instance, td, row, col, prop, value, cellProperties) {
              Handsontable.renderers.NumericRenderer.apply(this, arguments);
              if (row < 3 && col < 3) {
-              td.style.background = 'grey';
+              td.style.background = '#c0c0c0';
              } else if (row < 3 && col < 6) {
               td.style.background = '#d3d3d3';
              } else if (row < 3 && col < 9) {
-              td.style.background = 'grey';
+              td.style.background = '#c0c0c0';
              } else if (row < 6 && col < 3) {
               td.style.background = '#d3d3d3';
              } else if (row < 6 && col < 6) {
-           td.style.background = 'grey';
+           td.style.background = '#c0c0c0';
              } else if (row < 6 && col < 9) {
            td.style.background = '#d3d3d3';
              } else if (row < 9 && col < 3) {
-           td.style.background = 'grey';
+           td.style.background = '#c0c0c0';
              } else if (row < 9 && col < 6) {
            td.style.background = '#d3d3d3';
              } else if (row < 9 && col < 9) {
-           td.style.background = 'grey';
+           td.style.background = '#c0c0c0';
              }
            }") |> 
     hot_rows(rowHeights = 50) |> 
