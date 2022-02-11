@@ -90,6 +90,33 @@ body <- dashboardBody(
       tabName = "custom", 
       
       custom_sudoku_ui(id = "custom_sudoku")
+    ), 
+    
+    tabItem(
+      tabName = "about", 
+      
+      fluidRow(
+        column(
+          width = 12, 
+          
+          tags$div(
+            style = "width: 50%; margin: auto;", 
+            
+            tags$h1("Hello!", align = "center"), 
+            
+            tags$br(), 
+            
+            tags$div(
+              style = "font-size: 150%;", 
+              tags$p(
+                "Here is a list of the packages I've used to develop this application:"
+              ), 
+              
+              includeMarkdown("about.md")
+            )
+          )
+        )
+      )
     )
   )
 )
