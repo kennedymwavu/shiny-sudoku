@@ -16,7 +16,9 @@ generate and solve the sudokus.
 
 * [{rhandsontable}](https://jrowen.github.io/rhandsontable/) for the sudoku boards.
 
-* [{shinycssloaders}](https://github.com/daattali/shinycssloaders) to show loading animations
+* [{shinycssloaders}](https://github.com/daattali/shinycssloaders) to show loading animations.
+
+* [{markdown}](https://rmarkdown.rstudio.com/) for creating this tab contents.
 
 * **My Creativity**
 
