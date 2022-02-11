@@ -56,12 +56,12 @@ sidebar <- dashboardSidebar(
       startExpanded = TRUE, 
       
       menuSubItem(
-        text = "Random", 
+        text = "Random Puzzle", 
         tabName = "random"
       ), 
       
       menuSubItem(
-        text = "Custom", 
+        text = "Custom Puzzle", 
         tabName = "custom"
       )
     ), 
