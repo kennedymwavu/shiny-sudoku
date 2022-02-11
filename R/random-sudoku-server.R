@@ -34,9 +34,7 @@ random_sudoku_server <- function(id) {
         current_sudoku$initial |> 
           `colnames<-`(value = 1:9) |>
           `rownames<-`(value = 1:9) |>
-          rhandsontable(
-            readOnly = TRUE
-          ) |> 
+          rhandsontable() |> 
           hot_options()
       })
     }
