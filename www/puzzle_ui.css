@@ -1,0 +1,18 @@
+.puzzle_container {
+  height: 100vh;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 2px;
+}
+
+/* All child elements of .puzzle_container: */
+.puzzle_container > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  border-radius: 5px;
+  font-size: 150%;
+}
