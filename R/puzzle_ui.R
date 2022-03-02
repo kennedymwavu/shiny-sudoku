@@ -1,7 +1,5 @@
 puzzle_ui <- function(id) {
-  tags$div(
-    class = "puzzle_container", 
-    
+  shiny::tagList(
     uiOutput(outputId = NS(namespace = id, id = "puzzle"))
   )
 }
