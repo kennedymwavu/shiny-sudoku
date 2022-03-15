@@ -102,13 +102,32 @@ body <- dashboardBody(
   ), 
   
   # Increase side bar menu font size:
-  tags$style(HTML(".sidebar-menu>li>a>.fa { font-size: 20px; }")),
+  tags$style(
+    shiny::HTML(".sidebar-menu>li>a>.fa { font-size: 20px; }")
+  ), 
+  
+  # puzzle_ui css:
+  tags$head(
+    tags$link(
+      rel = "stylesheet", 
+      type = "text/css", 
+      href = "puzzle_ui.css"
+    )
+  ), 
   
   tabItems(
     tabItem(
       tabName = "random", 
       
-      random_sudoku_ui(id = "random_sudoku")
+      # random_sudoku_ui(id = "random_sudoku")
+      fluidRow(
+        column(
+          width = 12, 
+          align = "center", 
+          
+          puzzle_ui(id = "puzzle")
+        )
+      )
     ), 
     
     tabItem(

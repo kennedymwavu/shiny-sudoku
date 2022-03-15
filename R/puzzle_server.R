@@ -10,7 +10,8 @@ puzzle_server <- function(id) {
           purrr::map(
             .x = 1:81, 
             .f = ~ tags$div(
-              .x
+              .x, 
+              style = paste0('background-color: ', x[.x], ";")
             )
           )
         )
